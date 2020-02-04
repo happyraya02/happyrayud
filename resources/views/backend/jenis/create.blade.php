@@ -1,4 +1,4 @@
-@extends('layouts.backend')
+@extends('layouts.app')
 
 @section('css')
 <link rel="stylesheet" href="{{asset('assets/backend/assets/css/vendor/bootstrap.css')}}">
@@ -62,24 +62,24 @@
             <div class="col-md-12">
                 <div class="card">
                     <center>
-                        <div class="card-header">Tambah data pengolahan</div>
+                        <div class="card-header">Tambah data jenis</div>
                     </center>
 
                     <div class="card-body">
-                        <form action="{{route('pengolahan.store')}}" method="post" enctype="multipart/form-data">
+                        <form action="{{route('jenis.store')}}" method="post" enctype="multipart/form-data">
                             {{csrf_field()}}
                             <div class="form-group">
-                                <label for="">kategori</label>
-                                <input class="form-control" type="text" name="kategori" id="">
+                                <label for="">nama kopi</label>
+                                <input class="form-control" type="text" name="nama_kopi" id="">
                             </div>
                             <div class="form-group">
-                                <label for="">penjelasan</label>
-                                <input class="form-control" type="text" name="penjelasan" id="">
-                            </div>
+                                <label for="">Manfaat</label>
+                                <input class="form-control" type="text" name="manfaat" id="">
                             </div>
                             <div class="form-group">
-                                <label for="">gambar</label>
-                                <input type="file" class="form-control" name="gambar">
+                                <label for="">Varian</label>
+                                <input class="form-control" type="text" name="varian" id="">
+                            </div>
                             </div>
                             <div class="form-group">
                                 <button type="submit" class="btn btn-outline-info">

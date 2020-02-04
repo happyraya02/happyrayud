@@ -1,4 +1,4 @@
-@extends('layouts.backend')
+@extends('layouts.app')
 
 @section('css')
         <link rel="stylesheet" href="{{asset('assets/backend/vendor/datatables.net-bs4/css/dataTables.bootstrap4.css')}}">
@@ -26,7 +26,8 @@
                         <thead>
                             <tr>
                                 <th>Id</th>
-                                <th>Nama Kopi</th>
+                                <th>Nama Kategori</th>
+                                <th>Slug</th>
                                 <th style="text-align: center;">Aksi</th>
                             </tr>
                             <tbody>
@@ -34,7 +35,8 @@
                                 @foreach ($kategori as $data)
                                 <tr>
                                     <td>{{$no++}}</td>
-                                    <td>{{$data->nama_kopi}}</td>
+                                    <td>{{$data->nama_kategori}}</td>
+                                    <td>{{$data->slug}}</td>
 
 
                                     <td style="text-align: center;">
@@ -42,9 +44,6 @@
                                             {{csrf_field()}}
                                         <a href="{{route('kategori.edit', $data->id)}}"
                                             class="zmdi zmdi-edit btn btn-warning btn-rounded btn-floating btn-outline"> Edit
-                                        </a>
-                                        <a href="{{route('kategori.show', $data->id)}}"
-                                            class="zmdi zmdi-show btn btn-warning btn-rounded btn-floating btn-outline"> Show
                                         </a>
                                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                             <input type="hidden" name="_method" value="DELETE">

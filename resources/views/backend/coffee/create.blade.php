@@ -1,4 +1,4 @@
-@extends('layouts.backend')
+@extends('layouts.app')
 
 @section('css')
 <link rel="stylesheet" href="{{asset('assets/backend/assets/css/vendor/bootstrap.css')}}">
@@ -69,20 +69,31 @@
                         <form action="{{route('coffee.store')}}" method="post" enctype="multipart/form-data">
                             {{csrf_field()}}
                             <div class="form-group">
-                                <label for="">kategori</label>
-                                <input class="form-control" type="text" name="kategori" id="">
+                                <label for="">Nama Kopi</label>
+                                <input class="form-control" type="text" name="nama_kopi" id="">
                             </div>
                             <div class="form-group">
-                                <label for="">manfaat</label>
+                                <label for="">Kategori</label>
+                                <select class="form-control{{$errors->has('kategori') ? 'has-error' : '' }}" type="text"
+                                    name="id_kategori" id="s2_demo3" required>
+                                @foreach ($kategori as $data)
+                                    <option value="{{$data->id}}">
+                                    {{$data->nama_kategori}}</option>
+                                @endforeach
+                                </select>
+                                @if ($errors->has('kategori'))
+                                <span class = "help-block">
+                                <strong>{{$errors->first('kategori')}}</strong>
+                                </span>
+                                @endif
+                            </div>
+                            <div class="form-group">
+                                <label for="">Manfaat</label>
                                 <input class="form-control" type="text" name="manfaat" id="">
                             </div>
                             <div class="form-group">
-                                <label for="">efek</label>
-                                <input class="form-control" type="text" name="efek" id="">
-                            </div>
-                            <div class="form-group">
-                                <label for="">artikel</label>
-                                <input class="form-control" type="text" name="artikel" id="">
+                                <label for="">Harga</label>
+                                <input class="form-control" type="text" name="harga" id="">
                             </div>
                             <div class="form-group">
                                 <label for="">gambar</label>

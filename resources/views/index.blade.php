@@ -54,15 +54,17 @@
 			    <div class="container">
 			    	<div class="row align-items-center justify-content-between d-flex">
 				      <div id="logo">
-				        <a href="index.html"><img src="{{asset('assets/frontend/coffee/img/logo.png')}}" alt="" title="" /></a>
+				        <a href="/"><img src="{{asset('assets/frontend/coffee/img/logo.png')}}" alt="" title="" /></a>
 				      </div>
 				      <nav id="nav-menu-container">
 				        <ul class="nav-menu">
 				          <li class="menu-active"><a href="#home">Home</a></li>
 				          <li><a href="#pembuatan">pembuatan</a></li>
 				          <li><a href="#manfaat">manfaat</a></li>
-				          <li><a href="#efek">efek</a></li>
-				          <li><a href="#blog">Blog</a></li>
+                          <li><a href="#efek">efek</a></li>
+                          <li><a href="#sejarah">sejarah</a></li>
+                          <li><a href="#galeri">gallery</a></li>
+				          <li><a href="#shop">Shop</a></li>
 
 				        </ul>
 				      </nav><!-- #nav-menu-container -->
@@ -76,7 +78,7 @@
 				<div class="container">
 					<div class="row fullscreen d-flex align-items-center justify-content-start">
 						<div class="banner-content col-lg-7">
-							<h6 class="text-white text-uppercase">Now you can feel the Energy</h6>
+							<h6 class="text-white text-uppercase">kOPI KAMI KOPI INDONESIA</h6>
 							<h1>
 								Begin Your Day <br>
 								by drinking coffee
@@ -297,112 +299,70 @@
 						<div class="col-lg-4">
 							<div class="single-menu">
 								<div class="title-div justify-content-between d-flex">
-									<h4>Mengurangi Risiko Kanker Kulit</h4>
+									<h4>menghambat pertumbuhan</h4>
 									{{-- <p class="price float-right">
 										$49
 									</p> --}}
 								</div>
 								<p>
-									kafein dalam kopi dapat membantu pengencangan kulit, Minum kopi setiap hari dapat mengurangi risiko kanker kulit, terutama pada wanita.</p>
+									kopi hitam dapat menghambat pertumbuhan, karena kafein dapat mengganggu penyerapan kalsium dalam tubuh, sehingga pertumbuhan tulang akan terganggu.</p>
 							</div>
 						</div>
 						<div class="col-lg-4">
 							<div class="single-menu">
 								<div class="title-div justify-content-between d-flex">
-									<h4>Meningkatkan Stamina</h4>
+									<h4>Menyebabkan Gigi Berlubang</h4>
 									{{-- <p class="price float-right">
 										$49
 									</p> --}}
 								</div>
 								<p>
-									Minum kopi bisa meningkatkan stamina saat olahraga. Kafein ternyata dapat membantumu menyimpan energi saat berolahraga. </p>
+									Minuman berkafein, penambahan gula/pemanis lain menyebabkan kopi dikonsumsi memiliki kandungan gula tinggi, dan bila dikonsumsi sering, menyebabkan gigi berlubang.</p>
 							</div>
 						</div>
 						<div class="col-lg-4">
 							<div class="single-menu">
 								<div class="title-div justify-content-between d-flex">
-									<h4>Mengurangi Risiko Diabetes</h4>
+									<h4>Menurunkan Kesuburan</h4>
 									{{-- <p class="price float-right">
 										$49
 									</p> --}}
 								</div>
 								<p>
-									Diabetes disebabkan karena tubuh tidak efektif/kekurangan insulin, meminum kopi hitam Khasiatnya mengurangi risiko diabetes</p>
+									Mengonsumsi kafein yang berlebih enyebabkan penyakit pada dalam tubuh wanita, tuba falopi dan endometrium, sehingga menyebabkan ketidaksuburan pada wanita.</p>
 							</div>
 						</div>
 						<div class="col-lg-4">
 							<div class="single-menu">
 								<div class="title-div justify-content-between d-flex">
-									<h4>Otak Jadi Lebih Sehat</h4>
+									<h4>Gangguan Jantung</h4>
 									{{-- <p class="price float-right">
 										$49
 									</p> --}}
 								</div>
 								<p>
-									 Hasil penelitian itu menyatakan kafein dapat membantu otak lebih sehat, pintar dan lebih lama mengingat informasi yang di dapat</p>
+									 Gejala pertama yang ditimbulkan adalah jantung akan terasa berdebar apabila terlalu banyak minum kopi. Hal ini karena kafein dapat mempengaruhi susunan saraf pusat pada otak.</p>
 							</div>
 						</div>
 						<div class="col-lg-4">
 							<div class="single-menu">
 								<div class="title-div justify-content-between d-flex">
-									<h4>Mengurangi Tingkat Kematian</h4>
+									<h4>Gangguan Pencernaan</h4>
 									{{-- <p class="price float-right">
 										$49
 									</p> --}}
 								</div>
 								<p>
-									Meminum kopi secara signifikan meminum 2-4 cangkir kopi tiap hari memiliki 18 persen kemungkinan meninggal lebih renda</p>
+									Orang yang mempunyai kebiasaan mengkonsumsi minuman yang berkafein memang akan lebih sering mengeluhkan perutnya sakit. Apalagi di lakukan saat keadaan perut masih keadaan kosong.</p>
 							</div>
 						</div>
 					</div>
 				</div>
 			</section>
-			<!-- End menu Area -->
+            <!-- End menu Area -->
 
-			<!-- Start gallery Area -->
-			<section class="gallery-area section-gap" id="gallery">
-				<div class="container">
-					<div class="row d-flex justify-content-center">
-						<div class="menu-content pb-60 col-lg-10">
-							<div class="title text-center">
-								<h1 class="mb-10">What kind of Coffee we serve for you</h1>
-								<p>Who are in extremely love with eco friendly system.</p>
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-lg-4">
-							<a href="{{asset('assets/frontend/coffee/img/g1.jpg')}}" class="img-pop-home">
-								<img class="img-fluid" src="{{asset('assets/frontend/coffee/img/g1.jpg')}}" alt="">
-							</a>
-							<a href="{{asset('assets/frontend/coffee/img/g2.jpg')}}" class="img-pop-home">
-								<img class="img-fluid" src="{{asset('assets/frontend/coffee/img/g2.jpg')}}" alt="">
-							</a>
-						</div>
-						<div class="col-lg-8">
-							<a href="{{asset('assets/frontend/coffee/img/g3.jpg')}}" class="img-pop-home">
-								<img class="img-fluid" src="{{asset('assets/frontend/coffee/img/g3.jpg')}}" alt="">
-							</a>
-							<div class="row">
-								<div class="col-lg-6">
-									<a href="{{asset('assets/frontend/coffee/img/g4.jpg')}}" class="img-pop-home">
-										<img class="img-fluid" src="{{asset('assets/frontend/coffee/img/g4.jpg')}}" alt="">
-									</a>
-								</div>
-								<div class="col-lg-6">
-									<a href="{{asset('assets/frontend/coffee/img/g5.jpg')}}" class="img-pop-home">
-										<img class="img-fluid" src="{{asset('assets/frontend/coffee/img/g5.jpg')}}" alt="">
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<!-- End gallery Area -->
-
-			<!-- Start review Area -->
-			{{-- <section class="review-area section-gap" id="efek">
+            <!-- Start review Area -->
+			<section class="review-area section-gap" id="sejarah">
 				<div class="container">
 					<div class="row d-flex justify-content-center">
 						<div class="menu-content pb-60 col-lg-10">
@@ -465,54 +425,119 @@
 						</div>
 					</div>
 				</div>
-			</section> --}}
+			</section>
 			<!-- End review Area -->
 
-			<!-- Start blog Area -->
-			<section class="blog-area section-gap" id="blog">
+			<!-- Start gallery Area -->
+			<section class="gallery-area section-gap" id="galeri">
 				<div class="container">
 					<div class="row d-flex justify-content-center">
 						<div class="menu-content pb-60 col-lg-10">
 							<div class="title text-center">
-								<h1 class="mb-10">What kind of Coffee we serve for you</h1>
-								<p>Who are in extremely love with eco friendly system.</p>
+								<h1 class="mb-10">Here I present a coffee gallery</h1>
+								<p>Our Coffee Journey Our Indonesia</p>
 							</div>
 						</div>
 					</div>
 					<div class="row">
-						<div class="col-lg-6 col-md-6 single-blog">
+						<div class="col-lg-4">
+							<a href="{{asset('assets/frontend/coffee/img/g1.jpg')}}" class="img-pop-home">
+								<img class="img-fluid" src="{{asset('assets/frontend/coffee/img/g1.jpg')}}" alt="">
+							</a>
+							<a href="{{asset('assets/frontend/coffee/img/g2.jpg')}}" class="img-pop-home">
+								<img class="img-fluid" src="{{asset('assets/frontend/coffee/img/g2.jpg')}}" alt="">
+							</a>
+						</div>
+						<div class="col-lg-8">
+							<a href="{{asset('assets/frontend/coffee/img/g3.jpg')}}" class="img-pop-home">
+								<img class="img-fluid" src="{{asset('assets/frontend/coffee/img/g3.jpg')}}" alt="">
+							</a>
+							<div class="row">
+								<div class="col-lg-6">
+									<a href="{{asset('assets/frontend/coffee/img/g4.jpg')}}" class="img-pop-home">
+										<img class="img-fluid" src="{{asset('assets/frontend/coffee/img/g4.jpg')}}" alt="">
+									</a>
+								</div>
+								<div class="col-lg-6">
+									<a href="{{asset('assets/frontend/coffee/img/g5.jpg')}}" class="img-pop-home">
+										<img class="img-fluid" src="{{asset('assets/frontend/coffee/img/g5.jpg')}}" alt="">
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- End gallery Area -->
+
+			<!-- Start blog Area -->
+			<section class="blog-area section-gap" id="shop">
+				<div class="container">
+					<div class="row d-flex justify-content-center">
+						<div class="menu-content pb-60 col-lg-10">
+							<div class="title text-center">
+								<h1 class="mb-10">Buy The Best Of Indonesian Coffee</h1>
+								<p>Konsep dan misi kami adalah memajukan kopi Indonesia
+                                    baik di pasar nasional maupun internasional. <br>
+                                    Mari coba dan nikmati kopi Indonesia.</p>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-3 col-md-3 single-blog">
 							<img class="img-fluid" src="{{asset('assets/frontend/coffee/img/b1.jpg')}}" alt="">
 							<ul class="post-tags">
-								<li><a href="#">Travel</a></li>
-								<li><a href="#">Life Style</a></li>
+								<li><a href="#">Buy</a></li>
+
 							</ul>
 							<a href="#"><h4>Portable latest Fashion for young women</h4></a>
 							<p>
 								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore  et dolore.
 							</p>
-							<p class="post-date">
-								31st January, 2018
-							</p>
-						</div>
-						<div class="col-lg-6 col-md-6 single-blog">
+							
+                        </div>
+                        <div class="col-lg-3 col-md-3 single-blog">
+                            <img class="img-fluid" src="{{asset('assets/frontend/coffee/img/b1.jpg')}}" alt="">
+                            <ul class="post-tags">
+                                <li><a href="#">Buy</a></li>
+
+                            </ul>
+                            <a href="#">
+                                <h4>Portable latest Fashion for young women</h4>
+                            </a>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore.
+                            </p>
+                        </div>
+						<div class="col-lg-3 col-md-3 single-blog">
 							<img class="img-fluid" src="{{asset('assets/frontend/coffee/img/b2.jpg')}}" alt="">
 							<ul class="post-tags">
-								<li><a href="#">Travel</a></li>
-								<li><a href="#">Life Style</a></li>
+								<li><a href="#">Buy</a></li>
+
 							</ul>
 							<a href="#"><h4>Portable latest Fashion for young women</h4></a>
 							<p>
 								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore  et dolore.
 							</p>
-							<p class="post-date">
-								31st January, 2018
+							
+                        </div>
+                        <div class="col-lg-3 col-md-3 single-blog">
+							<img class="img-fluid" src="{{asset('assets/frontend/coffee/img/b2.jpg')}}" alt="">
+							<ul class="post-tags">
+								<li><a href="#">Buy</a></li>
+
+							</ul>
+							<a href="#"><h4>Portable latest Fashion for young women</h4></a>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore  et dolore.
 							</p>
+							
 						</div>
 					</div>
 				</div>
 			</section>
 			<!-- End blog Area -->
-
 
 			<!-- start footer Area -->
 			<footer class="footer-area section-gap">

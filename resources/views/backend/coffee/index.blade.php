@@ -1,25 +1,13 @@
 @extends('layouts.app')
 
 @section('css')
-        <link rel="stylesheet" href="{{asset('assets/backendx-special/nautilus-clipboard
-copy
-file:///home/lab/Downloads/bootstrap-4.4.1-dist
-vendor/datatables.net-bs4/css/dataTables.bootstrap4.css')}}">
+        <link rel="stylesheet" href="{{asset('assets/backendx-special/nautilus-clipboardcopyfile:///home/lab/Downloads/bootstrap-4.4.1-distvendor/datatables.net-bs4/css/dataTables.bootstrap4.css')}}">
 @endsection
 
 @section('js')
-        <script src="{{asset('assets/backendx-special/nautilus-clipboard
-copy
-file:///home/lab/Downloads/bootstrap-4.4.1-dist
-vendor/datatables.net/js/jquery.dataTables.js')}}"></script>
-        <script src="{{asset('assets/backendx-special/nautilus-clipboard
-copy
-file:///home/lab/Downloads/bootstrap-4.4.1-dist
-vendor/datatables.net-bs4/js/dataTables.bootstrap4.js')}}"></script>
-        <script src="{{asset('assets/backendx-special/nautilus-clipboard
-copy
-file:///home/lab/Downloads/bootstrap-4.4.1-dist
-js/components/datatables-init.js')}}"></script>
+        <script src="{{asset('assets/backendx-special/nautilus-clipboardcopyfile:///home/lab/Downloads/bootstrap-4.4.1-distvendor/datatables.net/js/jquery.dataTables.js')}}"></script>
+        <script src="{{asset('assets/backendx-special/nautilus-clipboardcopyfile:///home/lab/Downloads/bootstrap-4.4.1-distvendor/datatables.net-bs4/js/dataTables.bootstrap4.js')}}"></script>
+        <script src="{{asset('assets/backendx-special/nautilus-clipboardcopyfile:///home/lab/Downloads/bootstrap-4.4.1-distjs/components/datatables-init.js')}}"></script>
 @endsection
 
 @section('content')
@@ -38,10 +26,10 @@ js/components/datatables-init.js')}}"></script>
                         <thead>
                             <tr>
                                 <th>Id</th>
-                                <th>kategori</th>
-                                <th>manfaat</th>
-                                <th>efek</th>
-                                <th>artikel</th>
+                                <th>Nama</th>
+                                <th>Kategori</th>
+                                <th>Manfaat</th>
+                                <th>Harga</th>
                                 <th>Gambar</th>
                                 <th style="text-align: center;">Aksi</th>
                             </tr>
@@ -50,10 +38,10 @@ js/components/datatables-init.js')}}"></script>
                                 @foreach ($coffee as $data)
                                 <tr>
                                     <td>{{$no++}}</td>
-                                    <td>{{$data->kategori}}</td>
+                                    <td>{{$data->nama_kopi}}</td>
+                                    <td>{{$data->id_kategori}}</td>
                                     <td>{{$data->manfaat}}</td>
-                                    <td>{{$data->efek}}</td>
-                                    <td>{{$data->artikel}}</td>
+                                    <td>{{$data->harga}}</td>
                                    <td><img src="{{asset('assets/img/coffee/'.$data->gambar)}}" alt=""height="200px"width="300px"></td>
 
 

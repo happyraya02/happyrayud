@@ -3,9 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\pengolahan;
 
-class pengolahanController extends Controller
+class jenisController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +13,7 @@ class pengolahanController extends Controller
      */
     public function index()
     {
-        $pengolahan = pengolahan::all();
-        return view('backend.pengolahan.index', compact('pengolahan'));
+        //
     }
 
     /**

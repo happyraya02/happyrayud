@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCoffeesTable extends Migration
+class CreateJenisTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,13 @@ class CreateCoffeesTable extends Migration
      */
     public function up()
     {
-        Schema::create('coffees', function (Blueprint $table) {
+        Schema::create('jenis', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('id_kategori');
-            $table->foreign('id_kategori')->references('id')->on('kategoris')->onDelete('cascade');
+            $table->unsignedBigInteger('id_coffee');
+            $table->foreign('id_coffee')->references('id')->on('coffees')->onDelete('cascade');
             $table->string('nama_kopi');
             $table->string('manfaat');
-            $table->string('harga');
-            $table->string('gambar');
+            $table->string('varian');
             $table->timestamps();
         });
     }
@@ -32,6 +31,6 @@ class CreateCoffeesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('coffees');
+        Schema::dropIfExists('jenis');
     }
 }

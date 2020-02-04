@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePengolahansTable extends Migration
+class CreateTransaksisTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,13 @@ class CreatePengolahansTable extends Migration
      */
     public function up()
     {
-        Schema::create('pengolahans', function (Blueprint $table) {
+        Schema::create('transaksis', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('kategori');
-            $table->string('penjelasan');
-            $table->string('gambar');
+            $table->unsignedBigInteger('id_coffee');
+            $table->foreign('id_coffee')->references('id')->on('coffees')->onDelete('cascade');
+            $table->string('nama');
+            $table->string('nama_kopi');
+            $table->string('jumlah_kopi');
             $table->timestamps();
         });
     }
@@ -29,6 +31,6 @@ class CreatePengolahansTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('pengolahans');
+        Schema::dropIfExists('transaksis');
     }
 }

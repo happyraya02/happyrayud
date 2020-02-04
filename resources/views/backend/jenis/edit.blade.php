@@ -21,14 +21,22 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Mengubah Data kategori</div>
+                <div class="card-header">Mengubah Data jenis</div>
                 <div class="card-body">
-                    <form action="{{ route('kategori.update', $kategori->id) }}" method="post">
+                    <form action="{{ route('jenis.update', $jenis->id) }}" method="post">
                         <input name="_method" type="hidden" value="PATCH">
                         {{ csrf_field() }}
                         <div class="form-group">
-                            <label for="">nama_kategori</label>
-                            <input class="form-control" value="{{ $kategori->nama_kategori }}" type="text" name="nama_kategori">
+                            <label for="">nama_kopi</label>
+                            <input class="form-control" value="{{ $jenis->nama_kopi }}" type="text" name="nama_kopi">
+                        </div>
+                        <div class="form-group">
+                            <label for="">manfaat</label>
+                            <input class="form-control" value="{{ $jenis->manfaat }}" type="text" name="manfaat">
+                        </div>
+                        <div class="form-group">
+                            <label for="">varian</label>
+                            <input class="form-control" value="{{ $jenis->varian }}" type="text" name="varian">
                         </div>
                         <div class="form-group">
                             <button type="submit" class="btn btn-outline-info">

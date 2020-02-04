@@ -5,14 +5,15 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use App\coffee;
 
-class kategori extends Model
+class jenis extends Model
 {
     protected $fillable = [
-        'nama_kopi', 'slug'];
+        'nama_kopi', 'manfaat', 'varian'];
     public $timestamps = true;
 
     public function coffee()
     {
-        return $this->hasMany('App\coffee', 'id_coffee');
+        return $this->hasMany('App\coffee', 'id_jenis');
     }
 }
+

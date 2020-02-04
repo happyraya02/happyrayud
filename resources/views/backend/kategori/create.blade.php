@@ -1,4 +1,4 @@
-@extends('layouts.backend')
+@extends('layouts.app')
 
 @section('css')
 <link rel="stylesheet" href="{{asset('assets/backend/assets/css/vendor/bootstrap.css')}}">
@@ -70,8 +70,7 @@
                             {{csrf_field()}}
                             <div class="form-group">
                                 <label for="">nama kopi</label>
-                                <input class="form-control" type="text" name="nama_kopi" id="">
-                            </div>
+                                <input class="form-control" type="text" name="nama_kategori" id="">
                             </div>
                             <div class="form-group">
                                 <button type="submit" class="btn btn-outline-info">

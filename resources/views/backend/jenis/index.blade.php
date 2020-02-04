@@ -1,4 +1,4 @@
-@extends('layouts.backend')
+@extends('layouts.app')
 
 @section('css')
         <link rel="stylesheet" href="{{asset('assets/backend/vendor/datatables.net-bs4/css/dataTables.bootstrap4.css')}}">
@@ -15,9 +15,9 @@
     <div class="row">
         <div class="col-12">
             <div class="card">
-                <h5 class="card-header">Data Tables pengolahan</h5><br>
+                <h5 class="card-header">Data Tables jenis</h5><br>
                 <center>
-                        <a href="{{ route('pengolahan.create') }}"
+                        <a href="{{ route('jenis.create') }}"
                             cla mss="la la-cloud-upload btn btn-info btn-rounded btn-floating btn-outline">&nbsp;Tambah Data
                         </a>
                 </center>
@@ -26,28 +26,28 @@
                         <thead>
                             <tr>
                                 <th>Id</th>
-                                <th>kategori</th>
-                                <th>penjelasan</th>
-                                <th>Gambar</th>
+                                <th>Nama Kopi</th>
+                                <th>Manfaat</th>
+                                <th>Varian</th>
                                 <th style="text-align: center;">Aksi</th>
                             </tr>
                             <tbody>
                                     @php $no = 1;  @endphp
-                                @foreach ($pengolahan as $data)
+                                @foreach ($jenis as $data)
                                 <tr>
                                     <td>{{$no++}}</td>
-                                    <td>{{$data->kategori}}</td>
-                                    <td>{{$data->penjelasan}}</td>
-                                   <td><img src="{{asset('assets/img/pengolahan/'.$data->gambar)}}" alt=""height="200px"width="300px"></td>
+                                    <td>{{$data->nama_kopi}}</td>
+                                    <td>{{$data->manfaat}}</td>
+                                    <td>{{$data->varian}}</td>
 
 
                                     <td style="text-align: center;">
-                                        <form action="{{route('pengolahan.destroy', $data->id)}}" method="post">
+                                        <form action="{{route('jenis.destroy', $data->id)}}" method="post">
                                             {{csrf_field()}}
-                                        <a href="{{route('pengolahan.edit', $data->id)}}"
+                                        <a href="{{route('jenis.edit', $data->id)}}"
                                             class="zmdi zmdi-edit btn btn-warning btn-rounded btn-floating btn-outline"> Edit
                                         </a>
-                                        <a href="{{route('pengolahan.show', $data->id)}}"
+                                        <a href="{{route('jenis.show', $data->id)}}"
                                             class="zmdi zmdi-show btn btn-warning btn-rounded btn-floating btn-outline"> Show
                                         </a>
                                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

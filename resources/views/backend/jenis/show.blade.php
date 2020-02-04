@@ -62,40 +62,29 @@
             <div class="col-md-8">
                 <div class="card">
                     <center>
-                        <div class="card-header">Tambah coffee</div>
+                        <div class="card-header">Tambah jenis</div>
                     </center>
 
                     <div class="card-body">
-                        <form action="{{route('coffee.update', $coffee->id)}}" method="post">
+                        <form action="{{route('jenis.update', $jenis->id)}}" method="post">
                             <input type="hidden" name="_method" value="PATCH">
                             {{csrf_field()}}
                             <div class="form-group">
-                                <label for="">Nama Kopi</label>
-                                <input class="form-control" type="text" name="nama_kopi" id="" value="{{$coffee->nama_kopi}}"disabled>
-                            </div>
-                            <div class="form-group">
-                                <label for="">kategori</label>
-                                <input class="form-control" type="text" name="kategori" id="" value="{{$coffee->kategori}}"disabled>
+                                <label for="">nama_kopi</label>
+                                <input class="form-control" type="text" name="nama_kopi" id="" value="{{$jenis->nama_kopi}}"disabled>
                             </div>
                             <div class="form-group">
                                 <label for="">manfaat</label>
-                                <input class="form-control" type="text" name="manfaat" id="" value="{{$coffee->manfaat}}"disabled>
+                                <input class="form-control" type="text" name="manfaat" id="" value="{{$jenis->manfaat}}"disabled>
                             </div>
                             <div class="form-group">
-                                <label for="">harga</label>
-                                <input class="form-control" type="text" name="harga" id="" value="{{$coffee->harga}}"disabled>
+                                <label for="">varian</label>
+                                <input class="form-control" type="text" name="varian" id="" value="{{$jenis->varian}}"disabled>
                             </div>
-                            <div class="card-body">
-                                <label for="">Gambar</label>
-                                <img src="{{ asset('assets/img/coffee/'.$coffee->gambar.'')}}"
-                                style="width:300px;" class="float-left rounded m-r-30 m-b-30"disabled>
-                                <p>{!! $coffee->konten !!}</p>
-                                <br>
                             </div>
-
                             <div class="form-group">
-                                <a href="{{url('coffee')}}" class="btn btn-outline-info">Kembali</a>
-                            </div>
+                                <a href="{{url('admin/jenis')}}" class="btn btn-outline-info">Kembali</a>
+                                </div>
                         </form>
                     </div>
                 </div>
