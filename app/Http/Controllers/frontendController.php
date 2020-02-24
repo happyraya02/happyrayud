@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\coffee;
 class frontendController extends Controller
 {
     /**
@@ -13,7 +13,14 @@ class frontendController extends Controller
      */
     public function index()
     {
-        return view('index');
+        $coffee = coffee::with('kategori')->get();
+        return view('index', compact('coffee'));
+    }
+
+    public function frontransaksi($id)
+    {
+        $coffee = coffee::findOrFail($id);
+        return view('frontransaksi', compact('coffee'));
     }
 
     /**

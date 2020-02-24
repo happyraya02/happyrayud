@@ -18,7 +18,7 @@ class coffeeController extends Controller
      */
     public function index()
     {
-        $coffee = coffee::all();
+        $coffee = coffee::with('kategori')->get();
         return view('backend.coffee.index', compact('coffee'));
     }
 
@@ -88,7 +88,7 @@ class coffeeController extends Controller
     public function edit($id)
     {
         $coffee = coffee::findOrFail($id);
-        return view('backend.coffee.edit', compact('edit'));
+        return view('backend.coffee.edit', compact('coffee'));
     }
 
     /**

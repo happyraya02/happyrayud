@@ -1,4 +1,4 @@
-{{-- @extends('layouts.app')
+@extends('layouts.app')
 
 @section('content')
 <div class="container">
@@ -70,8 +70,8 @@
         </div>
     </div>
 </div>
-@endsection --}}
-<!DOCTYPE html>
+@endsection
+{{-- <!DOCTYPE html>
 <html lang="en">
 <head>
 	<title>Login</title>
@@ -178,4 +178,4 @@
 	<script src="{{asset('assets/frontend/login/js/main.js')}}"></script>
 
 </body>
-</html>
+</html> --}}

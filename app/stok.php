@@ -8,11 +8,11 @@ use App\transaksi;
 class stok extends Model
 {
     protected $fillable = [
-        'nama_kopi', 'jumlah_barang', 'barang_masuk', 'barang keluar', 'sisa barang'];
+        'id_coffee', 'jumlah_barang', 'barang_masuk', 'barang keluar', 'sisa barang'];
     public $timestamps = true;
 
-    public function transaksi()
+    public function coffee()
     {
-        return $this->hasMany('App\transaksi', 'id_stok');
+        return $this->belongsTo('App\coffee', 'id_coffee');
     }
 }

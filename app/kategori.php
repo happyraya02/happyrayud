@@ -13,6 +13,6 @@ class kategori extends Model
 
     public function coffee()
     {
-        return $this->hasMany('App\coffee', 'id_coffee');
+        return $this->hasMany('App\coffee', 'id_kategori');
     }
 }

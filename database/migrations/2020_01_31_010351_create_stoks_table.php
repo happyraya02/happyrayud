@@ -15,9 +15,8 @@ class CreateStoksTable extends Migration
     {
         Schema::create('stoks', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('id_transaksi');
-            $table->foreign('id_transaksi')->references('id')->on('transaksis')->onDelete('cascade');
-            $table->string('nama_kopi');
+            $table->unsignedBigInteger('id_coffee');
+            $table->foreign('id_coffee')->references('id')->on('coffees')->onDelete('cascade');
             $table->string('jumlah_barang');
             $table->string('barang_masuk');
             $table->string('barang_keluar');
@@ -26,7 +25,7 @@ class CreateStoksTable extends Migration
         });
     }
 
-    /**
+    /**m
      * Reverse the migrations.
      *
      * @return void

@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.backend')
 
 @section('css')
         <link rel="stylesheet" href="{{asset('assets/backendx-special/nautilus-clipboardcopyfile:///home/lab/Downloads/bootstrap-4.4.1-distvendor/datatables.net-bs4/css/dataTables.bootstrap4.css')}}">
@@ -39,7 +39,7 @@
                                 <tr>
                                     <td>{{$no++}}</td>
                                     <td>{{$data->nama_kopi}}</td>
-                                    <td>{{$data->id_kategori}}</td>
+                                    <td>{{$data->kategori->nama_kategori}}</td>
                                     <td>{{$data->manfaat}}</td>
                                     <td>{{$data->harga}}</td>
                                    <td><img src="{{asset('assets/img/coffee/'.$data->gambar)}}" alt=""height="200px"width="300px"></td>

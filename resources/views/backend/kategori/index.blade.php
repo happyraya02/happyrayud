@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.backend')
 
 @section('css')
         <link rel="stylesheet" href="{{asset('assets/backend/vendor/datatables.net-bs4/css/dataTables.bootstrap4.css')}}">
@@ -15,10 +15,10 @@
     <div class="row">
         <div class="col-12">
             <div class="card">
-                <h5 class="card-header">Data Tables kategori</h5><br>
+                <h5 class="card-header">Data Tables Jenis Kopi</h5><br>
                 <center>
                         <a href="{{ route('kategori.create') }}"
-                            cla mss="la la-cloud-upload btn btn-info btn-rounded btn-floating btn-outline">&nbsp;Tambah Data
+                            cla mss="la la-cloud-upload btn btn-info btn-rounded btn-floating btn-outline">&nbsp;Tambah Data Jenis Kopi
                         </a>
                 </center>
                 <div class="card-body">
@@ -26,7 +26,7 @@
                         <thead>
                             <tr>
                                 <th>Id</th>
-                                <th>Nama Kategori</th>
+                                <th>Nama Kopi</th>
                                 <th>Slug</th>
                                 <th style="text-align: center;">Aksi</th>
                             </tr>

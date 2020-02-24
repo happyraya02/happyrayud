@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.backend')
 
 @section('css')
 <link rel="stylesheet" href="{{asset('assets/backend/assets/css/vendor/bootstrap.css')}}">
@@ -62,7 +62,7 @@
             <div class="col-md-12">
                 <div class="card">
                     <center>
-                        <div class="card-header">Tambah data kategori</div>
+                        <div class="card-header">Tambah data Jenis Kopi</div>
                     </center>
 
                     <div class="card-body">

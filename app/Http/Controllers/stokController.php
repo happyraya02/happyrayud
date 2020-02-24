@@ -3,6 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\stok;
+use App\coffee;
+use File;
+use Session;
+use Auth;
+
 
 class stokController extends Controller
 {
@@ -13,7 +19,8 @@ class stokController extends Controller
      */
     public function index()
     {
-        //
+        $stok = stok::orderBy('created_at','desc')->get();
+        return view('backend.stok.index', compact('stok'));
     }
 
     /**
@@ -23,7 +30,9 @@ class stokController extends Controller
      */
     public function create()
     {
-        //
+        $stok = stok::all();
+        $coffee = coffee::all();
+        return view('backend.stok.create', compact('stok', 'coffee'));
     }
 
     /**
@@ -34,7 +43,20 @@ class stokController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // dd($request->all());
+        $stok = new stok();
+        $stok->id_coffee = $request->id_coffee;
+        $stok->jumlah_barang = $request->jumlah_barang;
+        $stok->barang_masuk = $request->barang_masuk;
+        $stok->barang_keluar = $request->barang_keluar;
+        $stok->sisa_barang = $request->sisa_barang;
+        $stok->save();
+        Session::flash("flash_notification", [
+            "level" => "success",
+            "message" => "Berhasil menyimpan <b>"
+                .$stok->judul. "</b>"
+        ]);
+        return redirect()->route('stok.index');
     }
 
     /**
@@ -45,7 +67,8 @@ class stokController extends Controller
      */
     public function show($id)
     {
-        //
+        $stok = stok::findOrFail($id);
+        return view('backend.stok.show', compact('stok'));
     }
 
     /**
@@ -56,7 +79,8 @@ class stokController extends Controller
      */
     public function edit($id)
     {
-        //
+        $stok = stok::findOrFail($id);
+        return view('backend.stok.edit', compact('stok'));
     }
 
     /**
@@ -68,7 +92,19 @@ class stokController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $stok = stok::findOrFail($id);
+        $stok->id_coffee = $request->id_coffee;
+        $stok->jumlah_barang = $request->jumlah_barang;
+        $stok->barang_masuk = $request->barang_masuk;
+        $stok->barang_keluar = $request->barang_keluar;
+        $stok->sisa_barang = $request->sisa_barang;
+        $stok->save();
+        Session::flash("flash_notification", [
+            "level" => "success",
+            "message" => "Berhasil menyimpan <b>"
+                . $stok->nama_kopi . "</b>!"
+        ]);
+        return redirect()->route('stok.index');
     }
 
     /**
@@ -79,6 +115,13 @@ class stokController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $stok = stok::findOrfail($id);
+        if(!stok::destroy($id)) return redirect()->back();
+        Session::flash("flash_notification",[
+            "level" => "Success",
+            "message" => "Berhasil menghapus<b>"
+                . $stok->stok."</b>"
+        ]);
+        return redirect()->route('stok.index');
     }
 }

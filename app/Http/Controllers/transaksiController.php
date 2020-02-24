@@ -3,6 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\transaksi;
+use App\coffee;
+use File;
+use Session;
+use Auth;
 
 class transaksiController extends Controller
 {
@@ -13,7 +18,8 @@ class transaksiController extends Controller
      */
     public function index()
     {
-        //
+        $transaksi = transaksi::orderBy('created_at','desc')->get();
+        return view('backend.transaksi.index', compact('transaksi'));
     }
 
     /**
@@ -23,7 +29,8 @@ class transaksiController extends Controller
      */
     public function create()
     {
-        //
+        $coffee = coffee::all();
+        return view('backend.transaksi.create', compact('coffee'));
     }
 
     /**
@@ -34,7 +41,17 @@ class transaksiController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $transaksi = new transaksi();
+        $transaksi->nama = $request->nama;
+        $transaksi->id_coffee = $request->id_coffee;
+        $transaksi->jumlah_kopi = $request->jumlah_kopi;
+        $transaksi->save();
+        Session::flash("flash_notification", [
+            "level" => "success",
+            "message" => "Berhasil menyimpan <b>
+                $transaksi->nama_kopi </b>!"
+        ]);
+        return redirect()->route('transaksi.index');
     }
 
     /**
@@ -45,7 +62,8 @@ class transaksiController extends Controller
      */
     public function show($id)
     {
-        //
+        $transaksi = transaksi::findOrFail($id);
+        return view('backend.transaksi.show', compact('transaksi'));
     }
 
     /**
@@ -56,7 +74,8 @@ class transaksiController extends Controller
      */
     public function edit($id)
     {
-        //
+        $transaksi = transaksi::findOrFail($id);
+        return view('backend.transaksi.edit', compact('transaksi'));
     }
 
     /**
@@ -68,7 +87,17 @@ class transaksiController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $transaksi = transaksi::findOrFail($id);
+        $transaksi->nama = $request->nama;
+        $transaksi->id_coffee = $request->id_coffee;
+        $transaksi->jumlah_kopi = $request->jumlah_kopi;
+        $transaksi->save();
+        Session::flash("flash_notification", [
+            "level" => "success",
+            "message" => "Berhasil menyimpan <b>"
+                . $transaksi->nama_kopi . "</b>!"
+        ]);
+        return redirect()->route('transaksi.index');
     }
 
     /**
@@ -79,6 +108,13 @@ class transaksiController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $transaksi = transaksi::findOrfail($id);
+        if(!$transaksi::destroy($id)) return redirect()->back();
+        Session::flash("flash_notification",[
+            "level" => "Success",
+            "message" => "Berhasil menghapus<b>"
+                . $transaksi->$transaksi."</b>"
+        ]);
+        return redirect()->route('transaksi.index');
     }
 }

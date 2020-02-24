@@ -5,16 +5,18 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use App\coffee;
 use App\stok;
+use App\transaksi;
 
 
 class transaksi extends Model
 {
     protected $fillable = [
-        'nama', 'nama_kopi', 'jumlah_kopi'];
+        'nama', 'id_coffee', 'jumlah_kopi'];
     public $timestamps = true;
 
     public function coffee()
     {
-        return $this->hasMany('App\coffee', 'id_transaksi');
+        return $this->belongsTo('App\coffee', 'id_coffee');
     }
+
 }

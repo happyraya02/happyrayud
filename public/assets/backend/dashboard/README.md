@@ -1,61 +1,103 @@
-# Kiaalap admin dashboard
-Free admin dashboard template
+CoolAdmin Bootstrap 4.1 Admin Dashboard Template
+================================================
 
-# Preview
+**CoolAdmin** is a responsive Bootstrap 4.1 admin template. It provides you with
+a collection of ready to use code snippets and utilities, custom pages, loads of
+charts, 4 different dashboard variations, a collection of applications and some
+useful widgets. Preview of this awesome admin template available here:
+https://colorlib.com/polygon/cooladmin/index.html
 
-![Kiaalap admin dashboard template preview](https://colorlib.com/wp/wp-content/uploads/sites/2/kiaalap-free-bootstrap-admin-dashboard-template.jpg)
+Preview
+=======
 
-# Overview
-Kiaalap is a full-featured, multipurpose, premium bootstrap admin template built with Bootstrap 4 Framework, HTML5, CSS and JQuery.
+### Screenshot
 
-It is a fully responsive bootstrap admin template/bootstrap admin dashboard template that comes with a huge collection of reusable UI components & plugins.
+![CoolAdmin admin dashboard template preview](media/9606031aabebde32fa96edeff071a132.jpg)
 
-We believe we have covered everything you need to set up an All kind of website.If there is something that you would like to know then we are happy to help you out.
+CoolAdmin admin dashboard template preview
 
-# Template Features:
+### Demo Site: [[Here]](https://colorlib.com/polygon/cooladmin/index.html)
 
-- 50+ PAGES
-- VALID HTML5 & CSS3
-- MATERIAL DESIGN
-- RESPONSIVE LAYOUT
-- 3 HOME VERSIONS
-- NEAT, CLEAN AND SIMPLE DESIGN
-- CREATIVE AND MODERN DESIGN
-- BUILT BASED ON BOOTSTRAP 3+
-- FULLY RESPONSIVE
-- CROSS BROWSER OPTIMIZATION
-- WELL COMMENTED HTML & CSS FILES
-- GOOGLE FONTS
-- GOOGLE MAP
-- C3 AND D3 CHARTS
-- PLOT CHART
-- PEITY CHARTS
-- SPARKLINES
-- CHOSEN
-- CODEMIRROR
-- COLORPICKER
-- IMAGES CROPPER
-- DATA MAP
-- DATEPICKER
-- X-EDITABLE
-- DUAL LISTBOX
-- GOOGLE MAPS
-- ICHECK
-- RANGESLIDER
-- JVECTORMAP
-- KNOB
-- MAPAEL
-- PASSWORD METER
-- PDF VIEWER
-- TOUCHSPIN
-- JSTREE
-- LOBIBOX
-- SUMMERNOTE
+### TOC
 
-# Other resources:
+-   [Built With](#built-with)
 
-- [Bootstrap Dashboards](https://colorlib.com/wp/free-bootstrap-admin-dashboard-templates/)
-- [Angular Dashboards](https://colorlib.com/wp/angularjs-admin-templates/)
-- [Free Admin Dashboards](https://colorlib.com/wp/free-html5-admin-dashboard-templates/)
-- [Website Templates](https://colorlib.com/wp/templates/)
-- [Free WordPress Themes](https://colorlib.com/wp/free-wordpress-themes/)
+-   [Changelog](#changelog)
+
+-   [Authors](#authors)
+
+-   [License](#license)
+
+### Built With
+
+-   [Accordion.JS](https://github.com/awps/Accordion.JS)
+
+-   [animsition](http://blivesta.github.io/animsition)
+
+-   [bootstrap-progressbar](https://github.com/minddust/bootstrap-progressbar)
+
+-   [Bootstrap](http://getbootstrap.com/)
+
+-   [Chart.js](http://www.chartjs.org/)
+
+-   [Counter-Up](https://github.com/bfintal/Counter-Up)
+
+-   [CSS Hamburgers](https://github.com/jonsuh/hamburgers)
+
+-   [Full Calendar](https://fullcalendar.io)
+
+-   [Fontawesome](http://fontawesome.io/)
+
+-   [jquery-circle-progress](http://kottenator.github.io/jquery-circle-progress/)
+
+-   [jQuery](https://jquery.com/)
+
+-   [Date picker](https://www.jqueryscript.net/time-clock/Date-Time-Picker-Bootstrap-4.html)
+
+-   [JQVMap](https://jqvmap.com/)
+
+-   [Lightbox2](https://github.com/lokesh/lightbox2)
+
+-   [Material Design
+    Icons](https://github.com/Templarian/MaterialDesign-Webfont)
+
+-   [perfect-scrollbar](https://github.com/utatti/perfect-scrollbar)
+
+-   [ProgressBar.js](https://github.com/kimmobrunfeldt/progressbar.js)
+
+-   [Select2](https://github.com/select2/select2)
+
+-   [Slick](http://kenwheeler.github.io/slick/)
+
+-   [Sweetalwer](https://github.com/sweetalert2/sweetalert2)
+
+-   [The Final Countdown for jQuery](http://hilios.github.io/jQuery.countdown/)
+
+-   [WOW](https://github.com/matthieua/WOW)
+
+### Changelog
+
+#### V 1.0.0
+
+Initial Release \#\#\# Authors [Colorlib](https://colorlib.com)
+
+### More info
+
+-   [Bootstrap
+    dashboards](https://colorlib.com/wp/free-bootstrap-admin-dashboard-templates/)
+
+-   [Angular dashboards](https://colorlib.com/wp/angularjs-admin-templates/)
+
+-   [Free Admin
+    Dashboards](https://colorlib.com/wp/free-html5-admin-dashboard-templates/)
+
+-   [Website Templates](https://colorlib.com/wp/templates/)
+
+-   [Free WordPress Themes](https://colorlib.com/wp/free-wordpress-themes/)
+
+### License
+
+CoolAdmin is licensed under The MIT License (MIT). Which means that you can use,
+copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the
+final products. But you always need to state that Colorlib is the original
+author of this template.

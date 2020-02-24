@@ -1,157 +1,214 @@
-<!doctype html>
-<html class="no-js" lang="en">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="au theme template">
+    <meta name="author" content="Hau Nguyen">
+    <meta name="keywords" content="au theme template">
+
+    <!-- Title Page-->
     <title>Dashboard</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- favicon
-		============================================ -->
-    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
-    <!-- Google Fonts
-		============================================ -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900" rel="stylesheet">
-    <!-- Bootstrap CSS
-		============================================ -->
-    <link rel="stylesheet" href="{{asset('assets/backend/dashboard/css/bootstrap.min.css')}}">
-    <!-- Bootstrap CSS
-		============================================ -->
-    <link rel="stylesheet" href="{{asset('assets/backend/dashboard/css/font-awesome.min.css')}}">
-    <!-- owl.carousel CSS
-		============================================ -->
-    <link rel="stylesheet" href="{{asset('assets/backend/dashboard/css/owl.carousel.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/backend/dashboard/css/owl.theme.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/backend/dashboard/css/owl.transitions.css')}}">
-    <!-- animate CSS
-		============================================ -->
-    <link rel="stylesheet" href="{{asset('assets/backend/dashboard/css/animate.css')}}">
-    <!-- normalize CSS
-		============================================ -->
-    <link rel="stylesheet" href="{{asset('assets/backend/dashboard/css/normalize.css')}}">
-    <!-- meanmenu icon CSS
-		============================================ -->
-    <link rel="stylesheet" href="{{asset('assets/backend/dashboard/css/meanmenu.min.css')}}">
-    <!-- main CSS
-		============================================ -->
-    <link rel="stylesheet" href="{{asset('assets/backend/dashboard/css/main.css')}}">
-    <!-- educate icon CSS
-		============================================ -->
-    <link rel="stylesheet" href="{{asset('assets/backend/dashboard/css/educate-custon-icon.css')}}">
-    <!-- morrisjs CSS
-		============================================ -->
-    <link rel="stylesheet" href="{{asset('assets/backend/dashboard/css/morrisjs/morris.css')}}">
-    <!-- mCustomScrollbar CSS
-		============================================ -->
-    <link rel="stylesheet" href="{{asset('assets/backend/dashboard/css/scrollbar/jquery.mCustomScrollbar.min.css')}}">
-    <!-- metisMenu CSS
-		============================================ -->
-    <link rel="stylesheet" href="{{asset('assets/backend/dashboard/css/metisMenu/metisMenu.min.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/backend/dashboard/css/metisMenu/metisMenu-vertical.css')}}">
-    <!-- calendar CSS
-		============================================ -->
-    <link rel="stylesheet" href="{{asset('assets/backend/dashboard/css/calendar/fullcalendar.min.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/backend/dashboard/css/calendar/fullcalendar.print.min.css')}}">
-    <!-- style CSS
-		============================================ -->
-    <link rel="stylesheet" href="{{asset('assets/backend/dashboard/style.css')}}">
-    <!-- responsive CSS
-		============================================ -->
-    <link rel="stylesheet" href="{{asset('assets/backend/dashboard/css/responsive.css')}}">
-    <!-- modernizr JS
-		============================================ -->
-    <script src="{{asset('assets/backend/dashboard/js/vendor/modernizr-2.8.3.min.js')}}"></script>
+
+    <!-- Fontfaces CSS-->
+    <link href="{{asset('assets/backend/dashboard/css/font-face.css')}}" rel="stylesheet" media="all">
+    <link href="{{asset('assets/backend/dashboard/vendor/font-awesome-4.7/css/font-awesome.min.css')}}" rel="stylesheet" media="all">
+    <link href="{{asset('assets/backend/dashboard/vendor/font-awesome-5/css/fontawesome-all.min.css')}}" rel="stylesheet" media="all">
+    <link href="{{asset('assets/backend/dashboard/vendor/mdi-font/css/material-design-iconic-font.min.css')}}" rel="stylesheet" media="all">
+
+    <!-- Bootstrap CSS-->
+    <link href="{{asset('assets/backend/dashboard/vendor/bootstrap-4.1/bootstrap.min.css')}}" rel="stylesheet" media="all">
+
+    <!-- Vendor CSS-->
+    <link href="{{asset('assets/backend/dashboard/vendor/animsition/animsition.min.css')}}" rel="stylesheet" media="all">
+    <link href="{{asset('assets/backend/dashboard/vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css')}}" rel="stylesheet" media="all">
+    <link href="{{asset('assets/backend/dashboard/vendor/wow/animate.css')}}" rel="stylesheet" media="all">
+    <link href="{{asset('assets/backend/dashboard/vendor/css-hamburgers/hamburgers.min.css')}}" rel="stylesheet" media="all">
+    <link href="{{asset('assets/backend/dashboard/vendor/slick/slick.css')}}" rel="stylesheet" media="all">
+    <link href="{{asset('assets/backend/dashboard/vendor/select2/select2.min.css')}}" rel="stylesheet" media="all">
+    <link href="{{asset('assets/backend/dashboard/vendor/perfect-scrollbar/perfect-scrollbar.css')}}" rel="stylesheet" media="all">
+
+    <!-- Main CSS-->
+    <link href="{{asset('assets/backend/dashboard/css/theme.css')}}" rel="stylesheet" media="all">
+
 </head>
 
-<body>
-    <!--[if lt IE 8]>
-		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-	<![endif]-->
-    <!-- Start Left menu area -->
-    <div class="left-sidebar-pro">
-        <nav id="sidebar" class="">
-            <div class="sidebar-header">
-                <a href="index.html"><img class="main-logo" src="{{asset('assets/backend/dashboard/img/logo/logo.png')}}" alt="" /></a>
-                <strong><a href="index.html"><img src="{{asset('assets/backend/dashboard/img/logo/logosn.png')}}" alt="" /></a></strong>
+<body class="animsition">
+    <div class="page-wrapper">
+        <!-- HEADER MOBILE-->
+        <header class="header-mobile d-block d-lg-none">
+            <div class="header-mobile__bar">
+                <div class="container-fluid">
+                    <div class="header-mobile-inner">
+                        <a class="logo" href="index.html">
+                            <img src="{{asset('assets/backend/dashboard/images/icon/logo.png')}}" alt="CoolAdmin" />
+                        </a>
+                        <button class="hamburger hamburger--slider" type="button">
+                            <span class="hamburger-box">
+                                <span class="hamburger-inner"></span>
+                            </span>
+                        </button>
+                    </div>
+                </div>
             </div>
-            <div class="left-custom-menu-adp-wrap comment-scrollbar">
-                <nav class="sidebar-nav left-sidebar-menu-pro">
-                    <ul class="metismenu" id="menu1">
+            <nav class="navbar-mobile">
+                <div class="container-fluid">
+                    <ul class="navbar-mobile__list list-unstyled">
+
 
                         <li>
-                            <a title="Landing Page" href="coffee" aria-expanded="false"><span
-                                    class="educate-icon educate-library icon-wrap" aria-hidden="true"></span>
-                                <span class="mini-click-non">Coffee</span></a>
+                            <a href="chart.html">
+                                <i class="fas fa-chart-bar"></i>Charts</a>
                         </li>
                         <li>
-                            <a title="Landing Page" href="pengolahan" aria-expanded="false"><span
-                                    class="educate-icon educate-library icon-wrap" aria-hidden="true"></span>
-                                <span class="mini-click-non">Pengolahan</span></a>
+                            <a href="table.html">
+                                <i class="fas fa-table"></i>Tables</a>
                         </li>
                         <li>
-                            <a title="Landing Page" href="kategori" aria-expanded="false"><span
-                                    class="educate-icon educate-library icon-wrap" aria-hidden="true"></span>
-                                <span class="mini-click-non">Kategori</span></a>
+                            <a href="form.html">
+                                <i class="far fa-check-square"></i>Forms</a>
+                        </li>
+                        <li>
+                            <a href="calendar.html">
+                                <i class="fas fa-calendar-alt"></i>Calendar</a>
+                        </li>
+                        <li>
+                            <a href="map.html">
+                                <i class="fas fa-map-marker-alt"></i>Maps</a>
+                        </li>
+                        <li class="has-sub">
+                            <a class="js-arrow" href="#">
+                                <i class="fas fa-copy"></i>Pages</a>
+                            <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
+                                <li>
+                                    <a href="login.html">Login</a>
+                                </li>
+                                <li>
+                                    <a href="register.html">Register</a>
+                                </li>
+                                <li>
+                                    <a href="forget-pass.html">Forget Password</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="has-sub">
+                            <a class="js-arrow" href="#">
+                                <i class="fas fa-desktop"></i>UI Elements</a>
+                            <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
+                                <li>
+                                    <a href="button.html">Button</a>
+                                </li>
+                                <li>
+                                    <a href="badge.html">Badges</a>
+                                </li>
+                                <li>
+                                    <a href="tab.html">Tabs</a>
+                                </li>
+                                <li>
+                                    <a href="card.html">Cards</a>
+                                </li>
+                                <li>
+                                    <a href="alert.html">Alerts</a>
+                                </li>
+                                <li>
+                                    <a href="progress-bar.html">Progress Bars</a>
+                                </li>
+                                <li>
+                                    <a href="modal.html">Modals</a>
+                                </li>
+                                <li>
+                                    <a href="switch.html">Switchs</a>
+                                </li>
+                                <li>
+                                    <a href="grid.html">Grids</a>
+                                </li>
+                                <li>
+                                    <a href="fontawesome.html">Fontawesome Icon</a>
+                                </li>
+                                <li>
+                                    <a href="typo.html">Typography</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- END HEADER MOBILE-->
+
+        <!-- MENU SIDEBAR-->
+        <aside class="menu-sidebar d-none d-lg-block">
+            <div class="logo">
+                <a href="#">
+                    <img src="{{asset('assets/backend/dashboard/images/icon/logo.png')}}" alt="Cool Admin" />
+                </a>
+            </div>
+            <div class="menu-sidebar__content js-scrollbar1">
+                <nav class="navbar-sidebar">
+                    <ul class="list-unstyled navbar__list">
+                        <li>
+                        <a href="{{ route('coffee.index')}}">
+                                <i class="far fa-check-square"></i>Coffee</a>
+                        </li>
+                        <li>
+                            <a href="{{ route('kategori.index')}}">
+                                <i class="far fa-check-square"></i>Kategori</a>
+                        </li>
+                        <li>
+                            <a href="{{ route('stok.index')}}">
+                                <i class="far fa-check-square"></i>Stok</a>
+                        </li>
+                        <li>
+                            <a href="{{ route('transaksi.index')}}">
+                                <i class="far fa-check-square"></i>Transaksi</a>
                         </li>
                     </ul>
                 </nav>
             </div>
-        </nav>
-    </div>
-    <!-- End Left menu area -->
-    <!-- Start Welcome area -->
-    <div class="all-content-wrapper">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="logo-pro">
-                        <a href="index.html"><img class="main-logo" src="{{asset('assets/backend/dashboard/img/logo/logo.png')}}" alt="" /></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="header-advance-area">
-            <div class="header-top-area">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <div class="header-top-wraper">
-                                <div class="row">
-                                    <div class="col-lg-1 col-md-0 col-sm-1 col-xs-12">
-                                        <div class="menu-switcher-pro">
-                                            <button type="button" id="sidebarCollapse"
-                                                class="btn bar-button-pro header-drl-controller-btn btn-info navbar-btn">
-                                                <i class="educate-icon educate-nav"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6 col-md-7 col-sm-6 col-xs-12">
-                                        <div class="header-top-menu tabl-d-n">
+        </aside>
+        <!-- END MENU SIDEBAR-->
 
+        <!-- PAGE CONTAINER-->
+        <div class="page-container">
+            <!-- HEADER DESKTOP-->
+            <header class="header-desktop">
+                <div class="section__content section__content--p30">
+                    <div class="container-fluid">
+                        <div class="header-wrap">
+                            <form class="form-header" action="" method="POST">
+
+                            </form>
+                            <div class="header-button">
+
+                                <div class="account-wrap">
+                                    <div class="account-item clearfix js-item-menu">
+                                        <div class="image">
+                                            <img src="{{asset('assets/backend/dashboard/images/icon/avatar-01.jpg')}}" alt="John Doe" />
                                         </div>
-                                    </div>
-                                    <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
-                                        <div class="header-right-info">
-                                            <ul class="nav navbar-nav mai-top-nav header-right-menu">
-                                                <li class="nav-item">
-                                                    <a href="#" data-toggle="dropdown" role="button"
-                                                        aria-expanded="false" class="nav-link dropdown-toggle">
-                                                        <img src="{{asset('assets/backend/dashboard/img/product/pro4.jpg')}}" alt="" />
-                                                        <span class="admin-name">HappyRaya</span>
-                                                        <i class="fa fa-angle-down edu-icon edu-down-arrow"></i>
+                                        <div class="content">
+                                            <a class="js-acc-btn" href="#">HappyRaya</a>
+                                        </div>
+                                        <div class="account-dropdown js-dropdown">
+                                            <div class="info clearfix">
+                                                <div class="image">
+                                                    <a href="#">
+                                                        <img src="{{asset('assets/backend/dashboard/images/icon/avatar-01.jpg')}}" alt="John Doe" />
                                                     </a>
-                                                    <ul role="menu"
-                                                        class="dropdown-header-top author-log dropdown-menu animated zoomIn">
+                                                </div>
+                                                <div class="content">
+                                                    <h5 class="name">
+                                                        <a href="#">HappyRaya</a>
+                                                    </h5>
+                                                    <span class="email">happyrayaa@gmail.com</span>
+                                                </div>
+                                            </div>
 
-                                                        <li><a href="#"><span
-                                                                    class="edu-icon edu-locked author-log-ic"></span>Log
-                                                                Out</a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-
-                                            </ul>
+                                            <div class="account-dropdown__footer">
+                                                <a href="admin">
+                                                    <i class="zmdi zmdi-power"></i>Logout</a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -159,75 +216,47 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </header>
+            <!-- HEADER DESKTOP-->
 
+            <!-- MAIN CONTENT-->
+            <br>
+            <br>
+            <br>
+            <br>
+
+           @yield('content')
+            <!-- END MAIN CONTENT-->
+            <!-- END PAGE CONTAINER-->
         </div>
-
-        @yield('content')
 
     </div>
 
-    <!-- jquery
-		============================================ -->
-    <script src="{{asset('assets/backend/dashboard/js/vendor/jquery-1.12.4.min.js')}}"></script>
-    <!-- bootstrap JS
-		============================================ -->
-    <script src="{{asset('assets/backend/dashboard/js/bootstrap.min.js')}}"></script>
-    <!-- wow JS
-		============================================ -->
-    <script src="{{asset('assets/backend/dashboard/js/wow.min.js')}}"></script>
-    <!-- price-slider JS
-		============================================ -->
-    <script src="{{asset('assets/backend/dashboard/js/jquery-price-slider.js')}}"></script>
-    <!-- meanmenu JS
-		============================================ -->
-    <script src="{{asset('assets/backend/dashboard/js/jquery.meanmenu.js')}}"></script>
-    <!-- owl.carousel JS
-		============================================ -->
-    <script src="{{asset('assets/backend/dashboard/js/owl.carousel.min.js')}}"></script>
-    <!-- sticky JS
-		============================================ -->
-    <script src="{{asset('assets/backend/dashboard/js/jquery.sticky.js')}}"></script>
-    <!-- scrollUp JS
-		============================================ -->
-    <script src="{{asset('assets/backend/dashboard/js/jquery.scrollUp.min.js')}}"></script>
-    <!-- counterup JS
-		============================================ -->
-    <script src="{{asset('assets/backend/dashboard/js/counterup/jquery.counterup.min.js')}}"></script>
-    <script src="{{asset('assets/backend/dashboard/js/counterup/waypoints.min.js')}}"></script>
-    <script src="{{asset('assets/backend/dashboard/js/counterup/counterup-active.js')}}"></script>
-    <!-- mCustomScrollbar JS
-		============================================ -->
-    <script src="{{asset('assets/backend/dashboard/js/scrollbar/jquery.mCustomScrollbar.concat.min.js')}}"></script>
-    <script src="{{asset('assets/backend/dashboard/js/scrollbar/mCustomScrollbar-active.js')}}"></script>
-    <!-- metisMenu JS
-		============================================ -->
-    <script src="{{asset('assets/backend/dashboard/js/metisMenu/metisMenu.min.js')}}"></script>
-    <script src="{{asset('assets/backend/dashboard/js/metisMenu/metisMenu-active.js')}}"></script>
-    <!-- morrisjs JS
-		============================================ -->
-    <script src="{{asset('assets/backend/dashboard/js/morrisjs/raphael-min.js')}}"></script>
-    <script src="{{asset('assets/backend/dashboard/js/morrisjs/morris.js')}}"></script>
-    <script src="{{asset('assets/backend/dashboard/js/morrisjs/morris-active.js')}}"></script>
-    <!-- morrisjs JS
-		============================================ -->
-    <script src="{{asset('assets/backend/dashboard/js/sparkline/jquery.sparkline.min.js')}}"></script>
-    <script src="{{asset('assets/backend/dashboard/js/sparkline/jquery.charts-sparkline.js')}}"></script>
-    <script src="{{asset('assets/backend/dashboard/js/sparkline/sparkline-active.js')}}"></script>
-    <!-- calendar JS
-		============================================ -->
-    <script src="{{asset('assets/backend/dashboard/js/calendar/moment.min.js')}}"></script>
-    <script src="{{asset('assets/backend/dashboard/js/calendar/fullcalendar.min.js')}}"></script>
-    <script src="{{asset('assets/backend/dashboard/js/calendar/fullcalendar-active.js')}}"></script>
-    <!-- plugins JS
-		============================================ -->
-    <script src="{{asset('assets/backend/dashboard/js/plugins.js')}}"></script>
-    <!-- main JS
-		============================================ -->
+    <!-- Jquery JS-->
+    <script src="{{asset('assets/backend/dashboard/vendor/jquery-3.2.1.min.js')}}"></script>
+    <!-- Bootstrap JS-->
+    <script src="{{asset('assets/backend/dashboard/vendor/bootstrap-4.1/popper.min.js')}}"></script>
+    <script src="{{asset('assets/backend/dashboard/vendor/bootstrap-4.1/bootstrap.min.js')}}"></script>
+    <!-- Vendor JS       -->
+    <script src="{{asset('assets/backend/dashboard/vendor/slick/slick.min.js')}}">
+    </script>
+    <script src="{{asset('assets/backend/dashboard/vendor/wow/wow.min.js')}}"></script>
+    <script src="{{asset('assets/backend/dashboard/vendor/animsition/animsition.min.js')}}"></script>
+    <script src="{{asset('assets/backend/dashboard/vendor/bootstrap-progressbar/bootstrap-progressbar.min.js')}}">
+    </script>
+    <script src="{{asset('assets/backend/dashboard/vendor/counter-up/jquery.waypoints.min.js')}}"></script>
+    <script src="{{asset('assets/backend/dashboard/vendor/counter-up/jquery.counterup.min.js')}}">
+    </script>
+    <script src="{{asset('assets/backend/dashboard/vendor/circle-progress/circle-progress.min.js')}}"></script>
+    <script src="{{asset('assets/backend/dashboard/vendor/perfect-scrollbar/perfect-scrollbar.js')}}"></script>
+    <script src="{{asset('assets/backend/dashboard/vendor/chartjs/Chart.bundle.min.js')}}"></script>
+    <script src="{{asset('assets/backend/dashboard/vendor/select2/select2.min.js')}}">
+    </script>
+
+    <!-- Main JS-->
     <script src="{{asset('assets/backend/dashboard/js/main.js')}}"></script>
-    <!-- tawk chat JS
-		============================================ -->
-    <script src="{{asset('assets/backend/dashboard/js/tawk-chat.js')}}"></script>
+
 </body>
 
 </html>
+<!-- end document-->

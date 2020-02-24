@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.backend')
 
 @section('css')
 <link rel="stylesheet" href="{{asset('assets/backend/assets/css/vendor/bootstrap.css')}}">
@@ -75,7 +75,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="">kategori</label>
-                                <input class="form-control" type="text" name="kategori" id="" value="{{$coffee->kategori}}"disabled>
+                                <input class="form-control" type="text" name="kategori" id="" value="{{$coffee->kategori->nama_kategori}}"disabled>
                             </div>
                             <div class="form-group">
                                 <label for="">manfaat</label>

@@ -1,5 +1,5 @@
 
-@extends('layouts.app')
+@extends('layouts.backend')
 @section('css')
 <link rel="stylesheet" href="{{ asset('css/select2.min.css') }}">
 @endsection
@@ -21,13 +21,13 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Mengubah Data kategori</div>
+                <div class="card-header">Mengubah Data Jenis Kopi</div>
                 <div class="card-body">
                     <form action="{{ route('kategori.update', $kategori->id) }}" method="post">
                         <input name="_method" type="hidden" value="PATCH">
                         {{ csrf_field() }}
                         <div class="form-group">
-                            <label for="">nama_kategori</label>
+                            <label for="">Nama Kopi</label>
                             <input class="form-control" value="{{ $kategori->nama_kategori }}" type="text" name="nama_kategori">
                         </div>
                         <div class="form-group">

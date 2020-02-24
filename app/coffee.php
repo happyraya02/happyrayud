@@ -4,18 +4,27 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use App\kategori;
-use App\jenis;
 use App\transaksi;
 
 
 class coffee extends Model
 {
     protected $fillable = [
-        'nama_kopi', 'kategori', 'manfaat', 'harga', 'gambar'];
+        'nama_kopi', 'id_kategori', 'manfaat', 'harga', 'gambar'];
     public $timestamps = true;
 
     public function kategori()
     {
-        return $this->hasMany('App\kategori', 'id_kategori');
+        return $this->belongsTo('App\kategori', 'id_kategori');
+    }
+
+    public function stok()
+    {
+        return $this->hasMany('App\stok', 'id_stok');
+    }
+
+    public function transaksi()
+    {
+        return $this->hasMany('App\transaksi', 'id_transaksi');
     }
 }

@@ -18,7 +18,6 @@ class CreateTransaksisTable extends Migration
             $table->unsignedBigInteger('id_coffee');
             $table->foreign('id_coffee')->references('id')->on('coffees')->onDelete('cascade');
             $table->string('nama');
-            $table->string('nama_kopi');
             $table->string('jumlah_kopi');
             $table->timestamps();
         });

@@ -23,12 +23,19 @@ Route::get('index', function () {
     return view('index');
 });
 
+// Route::get('frontransaksi', function () {
+//     return view('frontransaksi');
+// });
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('/', 'frontendController');
 Route::resource('coffee', 'coffeeController');
 Route::resource('kategori', 'kategoriController');
-Route::resource('jenis', 'jenisController');
 Route::resource('stok', 'stokController');
 Route::resource('transaksi', 'transaksiController');
+
+Route::group(['prefix' => '/'], function(){
+    Route::get('index', 'frontendController@index');
+    Route::get('frontransaksi/{coffee}', 'frontendController@frontransaksi');
+});

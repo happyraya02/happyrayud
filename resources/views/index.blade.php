@@ -281,7 +281,7 @@
 									</p> --}}
 								</div>
 								<p>
-								kafein yang terkandung di kopi hitam dan minuman lain dapat menjadi stimulan yang bisa meningkatkan tekanan darah dan denyut jantung anak, serta membuat mereka menjadi sulit tidur.</p>
+								kafein yang terkandung di kopi hitam dapat menjadi stimulan yang bisa meningkatkan tekanan darah dan denyut jantung anak, serta membuat mereka menjadi sulit tidur.</p>
 							</div>
 						</div>
 						<div class="col-lg-4">
@@ -317,7 +317,7 @@
 									</p> --}}
 								</div>
 								<p>
-									Minuman berkafein, penambahan gula/pemanis lain menyebabkan kopi dikonsumsi memiliki kandungan gula tinggi, dan bila dikonsumsi sering, menyebabkan gigi berlubang.</p>
+									Minuman berkafein, penambahan gula menyebabkan kopi dikonsumsi memiliki kandungan gula tinggi, dan bila dikonsumsi sering, menyebabkan gigi berlubang.</p>
 							</div>
 						</div>
 						<div class="col-lg-4">
@@ -374,36 +374,27 @@
 					</div>
 					<div class="row">
 						<div class="col-lg-6 col-md-6 single-review">
-							<img src="{{asset('assets/frontend/coffee/img/r1.png')}}" alt="">
+							{{-- <img src="{{asset('assets/frontend/coffee/img/r1.png')}}" alt=""> --}}
 							<div class="title d-flex flex-row">
-								<h4>lorem ipusm</h4>
-								<div class="star">
+								<h4>Sejarah Kopi</h4>
+								{{-- <div class="star">
 									<span class="fa fa-star checked"></span>
 									<span class="fa fa-star checked"></span>
 									<span class="fa fa-star checked"></span>
 									<span class="fa fa-star"></span>
 									<span class="fa fa-star"></span>
-								</div>
+								</div> --}}
 							</div>
 							<p>
-								Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker. Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker.
-							</p>
+								Sejarah kopi telah dicatat sejauh pada abad ke-9. Pertama kali, kopi hanya ada di Ethiopia, di mana biji-bijian asli ditanam oleh orang Ethiopia dataran tinggi. Akan tetapi, ketika bangsa Arab mulai meluaskan perdagangannya, biji kopi pun telah meluas sampai ke Afrika Utara dan biji kopi di sana ditanam secara massal.</p>
 						</div>
 						<div class="col-lg-6 col-md-6 single-review">
-							<img src="{{asset('assets/frontend/coffee/img/r2.png')}}" alt="">
+							{{-- <img src="{{asset('assets/frontend/coffee/img/r2.png')}}" alt=""> --}}
 							<div class="title d-flex flex-row">
-								<h4>lorem ipusm</h4>
-								<div class="star">
-									<span class="fa fa-star checked"></span>
-									<span class="fa fa-star checked"></span>
-									<span class="fa fa-star"></span>
-									<span class="fa fa-star"></span>
-									<span class="fa fa-star"></span>
-								</div>
+								<h4>Sejarah Kopi</h4>
 							</div>
 							<p>
-								Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker. Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker.
-							</p>
+								Sejarah kopi konon bermula pada abad ke-9 di Ethiopia. Namun, budidaya dan perdagangan kopi baru mulai populer pada abad ke-15 oleh pedagang Arab di Yaman. Kopi mencapai Eropa pada abad ke-17 namun tidak dapat tumbuh baik di sana. Bangsa-bangsa Eropa lantas menggunakan daerah jajahannya untuk membudidayakan tanaman kopi. Indonesia, yang diduduki Belanda, memiliki andil yang besar dalam sejarah dan persebaran jenis kopi di dunia.</p>
 						</div>
 					</div>
 					<div class="row counter-row">
@@ -432,7 +423,7 @@
 			<section class="gallery-area section-gap" id="galeri">
 				<div class="container">
 					<div class="row d-flex justify-content-center">
-						<div class="menu-content pb-60 col-lg-10">
+						<div class="menu-content pb-60 col-lg-8">
 							<div class="title text-center">
 								<h1 class="mb-10">Here I present a coffee gallery</h1>
 								<p>Our Coffee Journey Our Indonesia</p>
@@ -482,59 +473,24 @@
                                     Mari coba dan nikmati kopi Indonesia.</p>
 							</div>
 						</div>
-					</div>
+                    </div>
+
+                    {{-- COFFEE --}}
+
 					<div class="row">
+                        @foreach ($coffee as $data)
 						<div class="col-lg-3 col-md-3 single-blog">
-							<img class="img-fluid" src="{{asset('assets/frontend/coffee/img/b1.jpg')}}" alt="">
-							<ul class="post-tags">
-								<li><a href="#">Buy</a></li>
-
-							</ul>
-							<a href="#"><h4>Portable latest Fashion for young women</h4></a>
-							<p>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore  et dolore.
-							</p>
-							
-                        </div>
-                        <div class="col-lg-3 col-md-3 single-blog">
-                            <img class="img-fluid" src="{{asset('assets/frontend/coffee/img/b1.jpg')}}" alt="">
+							<img src="{{asset('assets/img/coffee/'.$data->gambar)}}" alt=""height="170px"width="230px">
+                            <a href="#"><h4>{{ $data->nama_kopi }}</h4></a>
+                            <p>{{ $data->manfaat }}</p>
                             <ul class="post-tags">
-                                <li><a href="#">Buy</a></li>
-
-                            </ul>
-                            <a href="#">
-                                <h4>Portable latest Fashion for young women</h4>
-                            </a>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore.
-                            </p>
-                        </div>
-						<div class="col-lg-3 col-md-3 single-blog">
-							<img class="img-fluid" src="{{asset('assets/frontend/coffee/img/b2.jpg')}}" alt="">
-							<ul class="post-tags">
-								<li><a href="#">Buy</a></li>
-
+								<li><a href="{{url('frontransaksi/' .$data->id)}}">{{ $data->harga }}</a></li>
 							</ul>
-							<a href="#"><h4>Portable latest Fashion for young women</h4></a>
-							<p>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore  et dolore.
-							</p>
-							
                         </div>
-                        <div class="col-lg-3 col-md-3 single-blog">
-							<img class="img-fluid" src="{{asset('assets/frontend/coffee/img/b2.jpg')}}" alt="">
-							<ul class="post-tags">
-								<li><a href="#">Buy</a></li>
+                        @endforeach
+                    </div>
 
-							</ul>
-							<a href="#"><h4>Portable latest Fashion for young women</h4></a>
-							<p>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore  et dolore.
-							</p>
-							
-						</div>
-					</div>
+
 				</div>
 			</section>
 			<!-- End blog Area -->
