@@ -38,4 +38,9 @@ Route::resource('transaksi', 'transaksiController');
 Route::group(['prefix' => '/'], function(){
     Route::get('index', 'frontendController@index');
     Route::get('frontransaksi/{coffee}', 'frontendController@frontransaksi');
+    Route::post('cart-post', 'Ecommerce\CartController@addToCart')->name('front.cart');
+    Route::get('/cart', 'Ecommerce\CartController@listCart')->name('front.list_cart');
+    Route::post('/cart/update', 'Ecommerce\CartController@updateCart')->name('front.update_cart');
+    Route::get('cart/{coffee}', 'frontendController@cart');
+    Route::get('fav/{coffee}', 'frontendController@fav');
 });

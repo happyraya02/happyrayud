@@ -483,9 +483,23 @@
 							<img src="{{asset('assets/img/coffee/'.$data->gambar)}}" alt=""height="170px"width="230px">
                             <a href="#"><h4>{{ $data->nama_kopi }}</h4></a>
                             <p>{{ $data->manfaat }}</p>
-                            <ul class="post-tags">
-								<li><a href="{{url('frontransaksi/' .$data->id)}}">{{ $data->harga }}</a></li>
-							</ul>
+                            <p>{{ $data->manfaat }}</p>
+                                <form action="{{ route('front.cart') }}" method="POST">
+                                  @csrf
+                                <div class="product_count">
+                                    <input type="hidden" name="qty" id="sst" maxlength="12" value="1">
+
+                                    <!-- BUAT INPUTAN HIDDEN YANG BERISI ID PRODUK -->
+                                    <input type="hidden" name="product_id" value="{{ $data->id }}" class="form-control">
+                                </div>
+                                <div class="card_area">
+
+                                    <!-- UBAH JADI BUTTON -->
+                                    <button class="main_btn">Add to Cart</button>
+                                    <!-- UBAH JADI BUTTON -->
+
+                                </div>
+                                </form>
                         </div>
                         @endforeach
                     </div>

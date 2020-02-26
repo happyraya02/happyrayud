@@ -58,14 +58,8 @@
 				      </div>
 				      <nav id="nav-menu-container">
 				        <ul class="nav-menu">
-				          <li class="menu-active"><a href="home">Home</a></li>
-				          <li><a href="pembuatan">pembuatan</a></li>
-				          <li><a href="manfaat">manfaat</a></li>
-                          <li><a href="efek">efek</a></li>
-                          <li><a href="sejarah">sejarah</a></li>
-                          <li><a href="galeri">gallery</a></li>
-				          <li><a href="shop">Shop</a></li>
-
+				            <li><a href="cart">Cart</a></li>
+							<li><a href="fav">Fav</a></li>
 				        </ul>
 				      </nav><!-- #nav-menu-container -->
 			    	</div>
@@ -76,23 +70,7 @@
 
 			<!-- Start menu Area -->
 			<section class="menu-area section-gap" id="manfaat">
-				<div class="container">
-					<div class="row d-flex justify-content-center">
-						<div class="menu-content pb-60 col-lg-10">
-							<div class="title text-center">
-								<h1 class="mb-10">Transaksi Kopi</h1>
-                                </div>
 
-                                <div class="container">
-                                    <br>
-                                    <div class="card-body">
-                                        <input type="hidden" name="_method" value="PATCH">
-                                        {{csrf_field()}}
-                                            <center><img src="{{ asset('assets/img/coffee/'.$coffee->gambar.'')}}"
-                                            style="width:300px;">
-                                            <br></center>
-                        </form>
-                    </div>
 
                                     <br>
                                 <div class="row justify-content-center">
@@ -118,7 +96,7 @@
                                                     </div>
                                                     <div class="form-group">
                                                         <label for=""><b>jumlah_kopi</b></label>
-                                                        <input class="form-control" type="text" name="jumlah_kopi" id="" value="">
+                                                        <input class="form-control" type="number" name="jumlah_kopi" id="" value="">
                                                     </div>
                                                     <div class="form-group">
                                                         <a href="" class="btn btn-outline-info">Check out</a>
@@ -128,7 +106,7 @@
                                         </div>
                                     </div>
                                 </div>
-    </div>
+                            </div>
 						</div>
 					</div>
 				</div>
